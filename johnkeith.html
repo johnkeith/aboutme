@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="John Keith">
+
+    <title>John Keith</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/jskcustom.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="header">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="bigtext">
+              <p>Hi, I'm John</p>
+              <p>Developer in Development</p>
+              
+              <p>What I'm Learning</p>
+            </div>
+            <p class="lead text-justify">I’ve been using three main sources for learning web development so far: Codeacademy, Ruby Monks, and Michael Hartl’s Ruby on Rails Tutorial. From these resources, I’ve begun to acquire a strong working knowledge of HTML, CSS, Ruby, Javascript, JQuery, Git, and Heroku.</p>
+            <div class="bigtext">
+             <p>What I'm Making</p>
+            </div>
+            <img class="img-responsive img-lead img-thumbnail" src="img/tedxcap.jpg" />
+            <p class="lead text-justify">Right now, I’m designing a TED<sup>x</sup> website for Hammond School. The site is a minimal one page design built on Bootstrap. [HTML, CSS, JQuery, Bootstrap 3]</p>
+            <br>
+            <img class="img-responsive img-lead img-thumbnail" src="img/sskcap.jpg" />
+            <p class="lead text-justify">I also design and maintain the backend for a Wordpress blog: <a href="http://www.scrumptiouslyskinny.com">Scrumptiously Skinny</a>. The site is built on the Genesis framework and is fully responsive. [HTML, CSS, a little PHP, Wordpress, Genesis]</p>
+            <div class="row block-wrapper">
+                <div class="col-md-4 res text-center"><a href="https://www.dropbox.com/s/uovb3l7uirh8hb7/John%20Terrell%20Keith%20Resume.pdf"><i class="fa fa-file fa-3x"></i><p>My Resume</p></a></div>
+                <div class="col-md-4 linked-in text-center"><a href="www.linkedin.com/pub/john-keith/48/139/8a0"><i class="fa fa-linkedin-square fa-3x"></i><p>LinkedIn</p></a></div>
+                <div class="col-md-4 mail text-center"><a href="mailto:johnkeith@outlook.com"><i class="fa fa-envelope fa-3x"></i><p>Mail</p></a></div>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bigtext.js"></script>
+
+    <script>
+      $('.bigtext').bigtext();
+    </script>
+
+    <script>
+
+    </script>
+    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+
+
+    <script>
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+    <script>
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+            || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+    </script>
+
+  </body>
+
+</html>
